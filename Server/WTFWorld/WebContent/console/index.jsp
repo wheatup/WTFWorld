@@ -3,11 +3,12 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<script type="text/javascript" src="/js/lib/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="/js/console.js"></script>
+		<script type="text/javascript" src="/console/js/lib/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="/console/js/console.js"></script>
 		<title>WTFWorld Server Console</title>
 	</head>
 	<body>
 		<input type="button" value="启动" id="btnStart" />
+		<input type="button" value="停止" id="btnStop" disabled="disabled" />
 	</body>
 </html>
