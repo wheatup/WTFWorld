@@ -3,6 +3,7 @@ package com.wheatup.wtfworld.server;
 import java.util.Map;
 
 import cc.wheatup.server.MessageCenter;
+import cc.wheatup.server.Pack;
 import cc.wheatup.server.User;
 
 public class GameCenter extends MessageCenter{
@@ -19,7 +20,10 @@ public class GameCenter extends MessageCenter{
 
 	@Override
 	public void handleMessage(User user, String type, Map<String, Object> map) {
-		System.out.println("User send a (%s) message.");
+		System.out.println(type);
+		if("$MESSAGE".equals(type)){
+			user.send(Pack.buildKVPack("$MESSAGE", "text", "你好啊，你刚说了：" + map.get("text")));
+		}
 	}
 
 }
